@@ -49,6 +49,7 @@ jobs:
           directory: build/out/
 
       - uses: ncipollo/release-action@v1
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
         with:
           allowUpdates: true
           artifacts: build/out/${{ matrix.os }}.zip
