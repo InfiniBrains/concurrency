@@ -14,17 +14,27 @@
 Setting up a new C++ project usually requires a significant amount of preparation and boilerplate code, even more so for modern C++ projects with tests, executables and continuous integration.
 This template is the result of learnings from many previous projects and should help reduce the work required to setup up a modern C++ project.
 
+## Documentation 
+
+https://infinibrains.github.io/concurrency/
+
 ## Requirements 
 
+- [x] Uses automated tests.
+- [x] Export documentation.
+- [ ] Cross platform. Should work on Android, iOS, compiles for VS, Clang, GCC and Emscripten. 
+  - [x] Windows Visual Studio
+  - [x] MacOS XCode
+  - [x] Linux Ubuntu GCC
+  - [x] Emscripten for Web
+  - [ ] Android
+  - [ ] iOS
 - [ ] Work stealing thread runner
 - [ ] Scheduler with dependency management
-- [ ] Cross platform. Should work on Android, iOS, compiles for VS, Clang, GCC and Emscripten. 
 - [ ] Uses the most modern cpp version on all platforms listed. 
 - [ ] Relies on std where is possible, or acceptable. 
 - [ ] Small and simple. 
-- [ ] Uses CMake and CPM. 
-- [ ] Uses automated tests. 
-- [ ] Export documentation. 
+- [ ] Uses CMake and CPM.
 - [ ] Generate bindings for other languages if possible. 
 - [ ] Offload jobs to gpu if possible. 
 - [ ] Scheduler should manage coroutines/fibers too
@@ -37,7 +47,6 @@ This template is the result of learnings from many previous projects and should 
 
 - https://graphitemaster.github.io/fibers/
 - https://www.youtube.com/watch?v=A7sVFJLJM-A - An Introduction to Multithreading in C++20 - Anthony Williams - CppCon 2022
-
 
 ## Features
 
