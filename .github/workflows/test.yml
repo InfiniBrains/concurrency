@@ -34,7 +34,7 @@ jobs:
         run: cmake -S. -Bbuild -DENABLE_TEST_COVERAGE=ON -DENABLE_STANDALONE=OFF -DENABLE_DOCUMENTATION=OFF  -DCMAKE_BUILD_TYPE=Debug
 
       - name: build
-        run: cmake --build build -j4 --target GreeterTests
+        run: cmake --build build -j4 --target ConcurrencyTests
 
       - name: test
         run: |

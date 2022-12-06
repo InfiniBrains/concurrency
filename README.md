@@ -9,30 +9,35 @@
   <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
 </p>
 
-# Modern Cross Platform Job Scheduler and Runner with Job Stealing
+# Modern Cross Platform Job Scheduler and Runner with Job Stealing for Game Engines
 
 Setting up a new C++ project usually requires a significant amount of preparation and boilerplate code, even more so for modern C++ projects with tests, executables and continuous integration.
 This template is the result of learnings from many previous projects and should help reduce the work required to setup up a modern C++ project.
 
 ## Requirements 
 
-- Work stealing thread runner
-- Scheduler with dependency management
-- Cross platform. Should work on Android, iOS, compiles for VS, Clang, GCC and Emscripten. 
-- Uses the most modern cpp version on all platforms listed. 
-- Relies on std where is possible, or acceptable. 
-- Small and simple. 
-- Uses CMake and CPM. 
-- Uses automated tests. 
-- Export documentation. 
-- Generate bindings for other languages if possible. 
-- Offload jobs to gpu if possible. 
-- Scheduler should manage coroutines/fibers too
-- ??? 
+- [ ] Work stealing thread runner
+- [ ] Scheduler with dependency management
+- [ ] Cross platform. Should work on Android, iOS, compiles for VS, Clang, GCC and Emscripten. 
+- [ ] Uses the most modern cpp version on all platforms listed. 
+- [ ] Relies on std where is possible, or acceptable. 
+- [ ] Small and simple. 
+- [ ] Uses CMake and CPM. 
+- [ ] Uses automated tests. 
+- [ ] Export documentation. 
+- [ ] Generate bindings for other languages if possible. 
+- [ ] Offload jobs to gpu if possible. 
+- [ ] Scheduler should manage coroutines/fibers too
+- [ ] Stop a job, not only the thread
+- [ ] A job can return a calculation to the caller
+- [ ] Wait for a selected group of jobs to finish. Fill an array with responses
+- [ ] ??? 
 
 ## References 
 
 - https://graphitemaster.github.io/fibers/
+- https://www.youtube.com/watch?v=A7sVFJLJM-A - An Introduction to Multithreading in C++20 - Anthony Williams - CppCon 2022
+
 
 ## Features
 
@@ -53,9 +58,9 @@ This template is the result of learnings from many previous projects and should 
 ### Adjust the template to your needs
 
 - Use this repo [as a template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
-- Replace all occurrences of "Greeter" in the relevant CMakeLists.txt with the name of your project
-  - Capitalization matters here: `Greeter` means the name of the project, while `greeter` is used in file names.
-  - Remember to rename the `include/greeter` directory to use your project's lowercase name and update all relevant `#include`s accordingly.
+- Replace all occurrences of "Concurrency" in the relevant CMakeLists.txt with the name of your project
+  - Capitalization matters here: `Concurrency` means the name of the project, while `concurrency` is used in file names.
+  - Remember to rename the `include/concurrency` directory to use your project's lowercase name and update all relevant `#include`s accordingly.
 - Replace the source files with your own
 - For header-only libraries: see the comments in [CMakeLists.txt](CMakeLists.txt)
 - Add [your project's codecov token](https://docs.codecov.io/docs/quick-start) to your project's github secrets under `CODECOV_TOKEN`
@@ -74,7 +79,7 @@ Use the following command to build and run the executable target.
 ```bash
 cmake -S standalone -B build/standalone
 cmake --build build/standalone
-./build/standalone/Greeter --help
+./build/standalone/Concurrency --help
 ```
 
 ### Build and run test suite
@@ -87,7 +92,7 @@ cmake --build build/test
 CTEST_OUTPUT_ON_FAILURE=1 cmake --build build/test --target test
 
 # or simply call the executable: 
-./build/test/GreeterTests
+./build/test/ConcurrencyTests
 ```
 
 To collect code coverage information, run CMake with the `-DENABLE_TEST_COVERAGE=1` option.
@@ -138,11 +143,11 @@ cmake -S all -B build
 cmake --build build
 
 # run tests
-./build/test/GreeterTests
+./build/test/ConcurrencyTests
 # format code
 cmake --build build --target fix-format
 # run standalone
-./build/standalone/Greeter --help
+./build/standalone/Concurrency --help
 # build docs
 cmake --build build --target GenerateDocs
 ```
