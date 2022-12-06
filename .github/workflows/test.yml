@@ -3,8 +3,7 @@ name: Test
 on:
   push:
     branches:
-      - master
-      - main
+      - '*'
   pull_request:
     branches:
       - master
@@ -43,5 +42,5 @@ jobs:
           ctest --build-config Debug
 
       - name: collect code coverage on ubuntu
-        if: startsWith(matrix.os,'ubuntu')
+        if: startsWith(matrix.os,'ubuntu') && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main')
         run: bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
