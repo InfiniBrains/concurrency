@@ -18,8 +18,8 @@ include(../cmake/CPM.cmake)
 CPMAddPackage("gh:onqtam/doctest@2.4.8")
 CPMAddPackage("gh:TheLartians/Format.cmake@1.7.3")
 
-# if(TEST_INSTALLED_VERSION) find_package(Concurrency REQUIRED) else() CPMAddPackage(NAME Concurrency
-# SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..) endif()
+# if(TEST_INSTALLED_VERSION) find_package(Concurrency REQUIRED) else() CPMAddPackage(NAME
+# Concurrency SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..) endif()
 
 # ---- Create binary ----
 

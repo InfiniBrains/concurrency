@@ -1,6 +1,6 @@
-#include <doctest/doctest.h>
 #include <concurrency/concurrency.h>
 #include <concurrency/version.h>
+#include <doctest/doctest.h>
 
 #include <string>
 

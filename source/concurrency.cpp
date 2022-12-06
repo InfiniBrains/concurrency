@@ -1,5 +1,5 @@
-#include <fmt/format.h>
 #include <concurrency/concurrency.h>
+#include <fmt/format.h>
 
 using namespace concurrency;
 
