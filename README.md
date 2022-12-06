@@ -3,13 +3,13 @@
 [![Actions Status](https://github.com/InfiniBrains/concurrency/workflows/Standalone/badge.svg)](https://github.com/InfiniBrains/concurrency/actions)
 [![Actions Status](https://github.com/InfiniBrains/concurrency/workflows/Test/badge.svg)](https://github.com/InfiniBrains/concurrency/actions)
 [![Actions Status](https://github.com/InfiniBrains/concurrency/workflows/Documentation/badge.svg)](https://github.com/InfiniBrains/concurrency/actions)
-[![codecov](https://codecov.io/gh/InfiniBrains/concurrency/branch/master/graph/badge.svg)](https://codecov.io/gh/InfiniBrains/concurrency)
+[![codecov](https://codecov.io/gh/InfiniBrains/concurrency/branch/master/graph/badge.svg?token=dafs9Weols)](https://codecov.io/gh/InfiniBrains/concurrency)
 
 <p align="center">
   <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
 </p>
 
-# ModernCppStarter
+# Modern Cross Platform Job Scheduler and Runner with Job Stealing
 
 Setting up a new C++ project usually requires a significant amount of preparation and boilerplate code, even more so for modern C++ projects with tests, executables and continuous integration.
 This template is the result of learnings from many previous projects and should help reduce the work required to setup up a modern C++ project.
@@ -205,4 +205,8 @@ Perhaps the [MiniCppStarter](https://github.com/TheLartians/MiniCppStarter) is s
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=InfiniBrains/concurrency,InfiniBrains/mobagen&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=InfiniBrains/concurrency,InfiniBrains/mobagen&Date)](https://github.com/InfiniBrains)
+
+## Coverage
+
+[![codecov](https://codecov.io/gh/InfiniBrains/concurrency/branch/master/graphs/tree.svg?token=dafs9Weols)](https://codecov.io/github/InfiniBrains/concurrency)
