@@ -24,6 +24,12 @@ file(GLOB sourcesstandalone CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source
 
 add_executable(ConcurrencyStandalone ${sourcesstandalone})
 
-set_target_properties(ConcurrencyStandalone PROPERTIES CXX_STANDARD 17 OUTPUT_NAME "Concurrency")
+if(EMSCRIPTEN)
+  set(CMAKE_EXECUTABLE_SUFFIX ".html") # todo: we should not need this!
+  message(STATUS "EMSCRIPTEN BUILD")
+endif()
+message(STATUS "CMAKE_EXECUTABLE_SUFFIX: ${CMAKE_EXECUTABLE_SUFFIX}")
+
+set_target_properties(ConcurrencyStandalone PROPERTIES CXX_STANDARD 17)
 
 target_link_libraries(ConcurrencyStandalone Concurrency::Concurrency cxxopts)

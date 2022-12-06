@@ -13,7 +13,8 @@ env:
 jobs:
   build:
     name: Build and publish documentation
-    runs-on: macos-latest
+    container: emscripten/emsdk
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -22,9 +23,12 @@ jobs:
           path: "**/cpm_modules"
           key: ${{ github.workflow }}-cpm-modules-${{ hashFiles('**/CMakeLists.txt', '**/*.cmake') }}
 
+      - name: APT Update
+        run: apt update
+
       - name: Install dependencies
         run: |
-          brew install doxygen
+          apt install -y doxygen
           pip3 install jinja2 Pygments
 
       - name: Build
