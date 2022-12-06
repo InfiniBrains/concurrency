@@ -81,3 +81,18 @@ packageProject(
   COMPATIBILITY SameMajorVersion
   DEPENDENCIES "fmt 8.1.1"
 )
+
+option(ENABLE_TEST_COVERAGE "ENABLE_TEST_COVERAGE" ON)
+if(ENABLE_TEST_COVERAGE)
+  add_subdirectory(test)
+endif()
+
+option(ENABLE_STANDALONE "ENABLE_STANDALONE" ON)
+if(ENABLE_STANDALONE)
+  add_subdirectory(standalone)
+endif()
+
+option(ENABLE_DOCUMENTATION "ENABLE_DOCUMENTATION" ON)
+if(ENABLE_DOCUMENTATION)
+  add_subdirectory(documentation)
+endif()

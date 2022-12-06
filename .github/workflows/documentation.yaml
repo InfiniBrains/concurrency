@@ -27,8 +27,8 @@ jobs:
 
       - name: Build
         run: |
-          cmake -Sdocumentation -Bbuild
-          cmake --build build --target GenerateDocs
+          cmake -S. -Bbuild -DENABLE_TEST_COVERAGE=OFF -DENABLE_STANDALONE=OFF -DENABLE_DOCUMENTATION=ON
+          cmake --build build --target GenerateDocs 
 
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3
