@@ -3,12 +3,10 @@ name: Style
 on:
   push:
     branches:
-      - master
-      - main
+      - '*'
   pull_request:
     branches:
-      - master
-      - main
+      - '*'
 
 env:
   CPM_SOURCE_CACHE: ${{ github.workspace }}/cpm_modules
@@ -29,7 +27,7 @@ jobs:
         run: pip3 install clang-format==14.0.6 cmake_format==0.6.11 pyyaml
 
       - name: configure
-        run: cmake -Stest -Bbuild
+        run: cmake -S. -Bbuild -DENABLE_TEST_COVERAGE=ON -DENABLE_STANDALONE=OFF -DENABLE_DOCUMENTATION=OFF
 
       - name: check style
         run: cmake --build build --target check-format

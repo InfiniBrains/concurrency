@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.14...3.22)
-
-project(GreeterTests LANGUAGES CXX)
+# cmake_minimum_required(VERSION 3.14...3.22)
+#
+# project(GreeterTests LANGUAGES CXX)
 
 # ---- Options ----
 
@@ -18,18 +18,15 @@ include(../cmake/CPM.cmake)
 CPMAddPackage("gh:onqtam/doctest@2.4.8")
 CPMAddPackage("gh:TheLartians/Format.cmake@1.7.3")
 
-if(TEST_INSTALLED_VERSION)
-  find_package(Greeter REQUIRED)
-else()
-  CPMAddPackage(NAME Greeter SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..)
-endif()
+# if(TEST_INSTALLED_VERSION) find_package(Greeter REQUIRED) else() CPMAddPackage(NAME Greeter
+# SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..) endif()
 
 # ---- Create binary ----
 
-file(GLOB sources CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp)
-add_executable(${PROJECT_NAME} ${sources})
-target_link_libraries(${PROJECT_NAME} doctest::doctest Greeter::Greeter)
-set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 17)
+file(GLOB sourcestest CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp)
+add_executable(GreeterTests ${sourcestest})
+target_link_libraries(GreeterTests doctest::doctest Greeter::Greeter)
+set_target_properties(GreeterTests PROPERTIES CXX_STANDARD 17)
 
 # enable compiler warnings
 if(NOT TEST_INSTALLED_VERSION)
@@ -37,7 +34,7 @@ if(NOT TEST_INSTALLED_VERSION)
     target_compile_options(Greeter PUBLIC -Wall -Wpedantic -Wextra -Werror)
   elseif(MSVC)
     target_compile_options(Greeter PUBLIC /W4 /WX)
-    target_compile_definitions(${PROJECT_NAME} PUBLIC DOCTEST_CONFIG_USE_STD_HEADERS)
+    target_compile_definitions(GreeterTests PUBLIC DOCTEST_CONFIG_USE_STD_HEADERS)
   endif()
 endif()
 
@@ -50,7 +47,7 @@ enable_testing()
 # ${PROJECT_NAME})
 
 include(${doctest_SOURCE_DIR}/scripts/cmake/doctest.cmake)
-doctest_discover_tests(${PROJECT_NAME})
+doctest_discover_tests(GreeterTests)
 
 # ---- code coverage ----
 
