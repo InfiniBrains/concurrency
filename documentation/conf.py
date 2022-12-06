@@ -1,7 +1,10 @@
 DOXYFILE = 'Doxyfile'
 
 LINKS_NAVBAR1 = [
-    (None, 'pages', [(None, 'about')]),
+    ("<a href=\"ConcurrencyStandalone.html\">Demo</a>", []),
+    (None, 'pages', [
+        (None, 'about'),
+    ]),
     (None, 'namespaces', []),
 ]
 

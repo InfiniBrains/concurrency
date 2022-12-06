@@ -31,10 +31,17 @@ jobs:
           apt install -y doxygen
           pip3 install jinja2 Pygments
 
-      - name: Build
-        run: |
-          cmake -S. -Bbuild -DENABLE_TEST_COVERAGE=OFF -DENABLE_STANDALONE=OFF -DENABLE_DOCUMENTATION=ON
-          cmake --build build --target GenerateDocs 
+      - name: Configure
+        run: emcmake cmake -S. -Bbuild -DENABLE_TEST_COVERAGE=OFF -DENABLE_STANDALONE=ON -DENABLE_DOCUMENTATION=ON
+
+      - name: Build Docs
+        run: cmake --build build --target GenerateDocs
+
+      - name: Build Emscripten
+        run: cmake --build build -j4 --config Release
+
+      - name: Copy Emscripten build to docs
+        run: cp -R build/out/* build/documentation/doxygen/html/
 
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3
