@@ -14,6 +14,26 @@
 Setting up a new C++ project usually requires a significant amount of preparation and boilerplate code, even more so for modern C++ projects with tests, executables and continuous integration.
 This template is the result of learnings from many previous projects and should help reduce the work required to setup up a modern C++ project.
 
+## Requirements 
+
+- Work stealing thread runner
+- Scheduler with dependency management
+- Cross platform. Should work on Android, iOS, compiles for VS, Clang, GCC and Emscripten. 
+- Uses the most modern cpp version on all platforms listed. 
+- Relies on std where is possible, or acceptable. 
+- Small and simple. 
+- Uses CMake and CPM. 
+- Uses automated tests. 
+- Export documentation. 
+- Generate bindings for other languages if possible. 
+- Offload jobs to gpu if possible. 
+- Scheduler should manage coroutines/fibers too
+- ??? 
+
+## References 
+
+- https://graphitemaster.github.io/fibers/
+
 ## Features
 
 - [Modern CMake practices](https://pabloariasal.github.io/2018/02/19/its-time-to-do-cmake-right/)
