@@ -12,3 +12,7 @@ cmake-*/
 # visual studio
 out/
 .vs/
+
+# node
+node_modules
+package-lock.json
