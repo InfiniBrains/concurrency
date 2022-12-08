@@ -1,10 +1,3 @@
-[![Actions Status](https://github.com/InfiniBrains/concurrency/workflows/Release/badge.svg)](https://github.com/InfiniBrains/concurrency/actions)
-[![Actions Status](https://github.com/InfiniBrains/concurrency/workflows/Style/badge.svg)](https://github.com/InfiniBrains/concurrency/actions)
-[![Actions Status](https://github.com/InfiniBrains/concurrency/workflows/Standalone/badge.svg)](https://github.com/InfiniBrains/concurrency/actions)
-[![Actions Status](https://github.com/InfiniBrains/concurrency/workflows/Test/badge.svg)](https://github.com/InfiniBrains/concurrency/actions)
-[![Actions Status](https://github.com/InfiniBrains/concurrency/workflows/Documentation/badge.svg)](https://github.com/InfiniBrains/concurrency/actions)
-[![codecov](https://codecov.io/gh/InfiniBrains/concurrency/branch/master/graph/badge.svg?token=dafs9Weols)](https://codecov.io/gh/InfiniBrains/concurrency)
-
 <p align="center">
   <img src="https://repository-images.githubusercontent.com/254842585/4dfa7580-7ffb-11ea-99d0-46b8fe2f4170" height="175" width="auto" />
 </p>
@@ -14,7 +7,15 @@
 Setting up a new C++ project usually requires a significant amount of preparation and boilerplate code, even more so for modern C++ projects with tests, executables and continuous integration.
 This template is the result of learnings from many previous projects and should help reduce the work required to setup up a modern C++ project.
 
-## Documentation 
+CI: [![Release](https://github.com/InfiniBrains/concurrency/actions/workflows/release.yml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/release.yml) [![Standalone](https://github.com/InfiniBrains/concurrency/actions/workflows/standalone.yml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/standalone.yml) [![Documentation](https://github.com/InfiniBrains/concurrency/actions/workflows/documentation.yaml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/documentation.yaml) [![Test](https://github.com/InfiniBrains/concurrency/actions/workflows/test.yml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/test.yml) [![Style](https://github.com/InfiniBrains/concurrency/actions/workflows/style.yml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/style.yml) 
+
+Join us: [![say thanks](https://img.shields.io/badge/Say%20Thanks-👍-1EAEDB.svg)](https://github.com/InfiniBrains/concurrency/stargazers) [![Discord](https://img.shields.io/discord/956922983727915078)](https://discord.gg/9CdJeQ2XKB)
+
+Quality: [![codecov](https://codecov.io/gh/InfiniBrains/concurrency/branch/master/graph/badge.svg?token=dafs9Weols)](https://codecov.io/gh/InfiniBrains/concurrency)
+
+Metrics: [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4d466484717742389523b9a4800ec5f8)](https://www.codacy.com/gh/InfiniBrains/concurrency/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=InfiniBrains/concurrency&amp;utm_campaign=Badge_Grade) ![GitHub language count](https://img.shields.io/github/languages/count/InfiniBrains/concurrency) ![GitHub search hit counter](https://img.shields.io/github/search/InfiniBrains/concurrency/todo) ![Lines of code](https://img.shields.io/tokei/lines/github.com/InfiniBrains/concurrency) ![GitHub all releases](https://img.shields.io/github/downloads/InfiniBrains/concurrency/total) ![GitHub contributors](https://img.shields.io/github/contributors/InfiniBrains/concurrency)
+
+## Documentation
 
 https://infinibrains.github.io/concurrency/
 
