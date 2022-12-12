@@ -1,5 +1,5 @@
-#ifndef CONCURRENCY_JOBDEQUE_H
-#define CONCURRENCY_JOBDEQUE_H
+#ifndef CONCURRENCY_STEALINGDEQUE_H
+#define CONCURRENCY_STEALINGDEQUE_H
 #include <concepts>
 #include <deque>
 #include <mutex>
@@ -25,12 +25,12 @@ namespace concurrency {
 
   template <typename T, typename Lock = std::mutex>
   requires is_lockable<Lock>
-  class JobQueue {
+  class StealingQueue {
   public:
     using value_type = T;
     using size_type = typename std::deque<T>::size_type;
 
-    JobQueue() = default;
+    StealingQueue() = default;
 
     void push(T&& value) {
       std::lock_guard lock(mutex_);
@@ -62,7 +62,8 @@ namespace concurrency {
 
   private:
     std::deque<T> data_{};
+    // todo: improve the locking mechanism!
     mutable Lock mutex_{};
   };
 }  // namespace concurrency
-#endif  // CONCURRENCY_JOBDEQUE_H
+#endif  // CONCURRENCY_STEALINGDEQUE_H
