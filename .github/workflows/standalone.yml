@@ -40,3 +40,24 @@ jobs:
       - name: run on windows
         if: startsWith(matrix.os, 'windows')
         run: ./build/out/Debug/ConcurrencyStandalone.exe
+
+  build-emscripten:
+    runs-on: ubuntu-latest
+    container: emscripten/emsdk
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+        with:
+          path: "**/cpm_modules"
+          key: emscripten-${{ github.workflow }}-cpm-modules-${{ hashFiles('**/CMakeLists.txt', '**/*.cmake') }}
+
+      - name: configure
+        run: emcmake cmake -DCMAKE_C_ABI_COMPILED=ON -DCMAKE_CXX_ABI_COMPILED=ON -DEMSCRIPTEN=1 -DCMAKE_BUILD_TYPE=MinSizeRel -S. -Bbuild -DENABLE_TEST_COVERAGE=OFF -DENABLE_STANDALONE=ON -DENABLE_DOCUMENTATION=OFF -DCMAKE_EXECUTABLE_SUFFIX=".html"
+
+      - name: build
+        run: cmake --build build -j4 --config Release
+
+      - name: execute
+        run: node ./build/out/ConcurrencyStandalone.js
