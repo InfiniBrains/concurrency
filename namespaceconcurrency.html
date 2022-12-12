@@ -80,7 +80,8 @@
             </dt>
             <dd><a href="structconcurrency_1_1Job.html" class="m-doc">Job</a> descriptor to be run by the workers.</dd>
             <dt>
-              class <a href="classconcurrency_1_1JobDeque.html" class="m-doc">JobDeque</a>
+              <div class="m-doc-template">template&lt;typename T, typename Lock = std::mutex&gt;</div>
+              class <a href="classconcurrency_1_1JobQueue.html" class="m-doc">JobQueue</a>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -122,6 +123,11 @@
               concept <a href="#a99455f3d07931f614476eea433b4dbd6" class="m-doc">InvocableJob</a>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <div class="m-doc-template">template&lt;typename Lock&gt;</div>
+              concept <a href="#a17023edb77ba52a6688af99bb6c190f0" class="m-doc">is_lockable</a>
+            </dt>
+            <dd>Simple concept for the Lockable and Basic Lockable types as defined by the C++ standard.</dd>
           </dl>
         </section>
         <section>
@@ -155,6 +161,17 @@
               concept concurrency::<wbr /><a href="#a99455f3d07931f614476eea433b4dbd6" class="m-doc-self">InvocableJob</a>
             </h3>
             <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a17023edb77ba52a6688af99bb6c190f0"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="JobDeque_8h.html">&lt;concurrency/JobDeque.h&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename Lock&gt;
+              </div>
+              concept concurrency::<wbr /><a href="#a17023edb77ba52a6688af99bb6c190f0" class="m-doc-self">is_lockable</a>
+            </h3>
+            <p>Simple concept for the Lockable and Basic Lockable types as defined by the C++ standard.</p>
+<p>See <a href="https://en.cppreference.com/w/cpp/named_req/Lockable">https://en.cppreference.com/w/cpp/named_<wbr />req/Lockable</a> and <a href="https://en.cppreference.com/w/cpp/named_req/BasicLockable">https://en.cppreference.com/w/cpp/named_<wbr />req/BasicLockable</a> for details.</p>
           </div></section>
         </section>
       </div>

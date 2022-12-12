@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>concurrency::JobDeque class | Concurrency</title>
+  <title>concurrency::JobQueue class | Concurrency</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon-dark.png" type="image/png" />
@@ -50,10 +50,67 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          <span class="m-breadcrumb"><a href="namespaceconcurrency.html">concurrency</a>::<wbr/></span>JobDeque <span class="m-thin">class</span>
-          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="JobDeque_8h.html">&lt;concurrency/JobDeque.h&gt;</a></div>
+          <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="JobDeque_8h.html">&lt;concurrency/JobDeque.h&gt;</a></div>
+          <div class="m-doc-template">template&lt;typename T, typename Lock = std::mutex&gt;</div>
+          <span class="m-breadcrumb"><a href="namespaceconcurrency.html">concurrency</a>::<wbr/></span>JobQueue <span class="m-thin">class</span>
         </h1>
         <p><span></span></p>
+        <nav class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-types">Public types</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="ada786a016bf71c268764dad1f3ee52dc">
+              using <a href="#ada786a016bf71c268764dad1f3ee52dc" class="m-doc-self">value_type</a> = T
+            </dt>
+            <dd><span></span></dd>
+            <dt id="af4b460f724218446002e355586832232">
+              using <a href="#af4b460f724218446002e355586832232" class="m-doc-self">size_type</a> = typename std::deque&lt;T&gt;::<a href="classconcurrency_1_1JobQueue.html#af4b460f724218446002e355586832232" class="m-doc">size_<wbr />type</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="ad3261c6b44d430adf038c08c30e0ebde">
+              <span class="m-doc-wrap-bumper"><a href="#ad3261c6b44d430adf038c08c30e0ebde" class="m-doc-self">JobQueue</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-info">defaulted</span></span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="aace0d2097652a6ff770b90a22f91b0f2">
+              <span class="m-doc-wrap-bumper">void <a href="#aace0d2097652a6ff770b90a22f91b0f2" class="m-doc-self">push</a>(</span><span class="m-doc-wrap">T&amp;&amp; value)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a78898676b8bc008bc20b0dc8fd5a22be">
+              <span class="m-doc-wrap-bumper">auto <a href="#a78898676b8bc008bc20b0dc8fd5a22be" class="m-doc-self">empty</a>(</span><span class="m-doc-wrap">) const -&gt; bool</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4bd4854026822f26c358d399dd0ddbe8">
+              <span class="m-doc-wrap-bumper">auto <a href="#a4bd4854026822f26c358d399dd0ddbe8" class="m-doc-self">pop</a>(</span><span class="m-doc-wrap">) -&gt; std::optional&lt;T&gt;</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="afc6b1d236231179dc7e34556a3374b42">
+              <span class="m-doc-wrap-bumper">auto <a href="#afc6b1d236231179dc7e34556a3374b42" class="m-doc-self">steal</a>(</span><span class="m-doc-wrap">) -&gt; std::optional&lt;T&gt;</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
       </div>
     </div>
   </div>
