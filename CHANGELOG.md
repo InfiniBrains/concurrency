@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/InfiniBrains/concurrency/compare/v1.1.0...v1.1.1) (2022-12-12)
+
+
+### Bug Fixes
+
+* **style:** create script to run style fix before commiting ([5324c5c](https://github.com/InfiniBrains/concurrency/commit/5324c5c5a24c79e4659ee698506cfa11deb8e142))
+
 # [1.1.0](https://github.com/InfiniBrains/concurrency/compare/v1.0.0...v1.1.0) (2022-12-12)
 
 
