@@ -8,12 +8,19 @@ namespace concurrency {
   using default_function_type = std::function<void()>;
 #endif
 
+  template<typename T = default_function_type>
+  concept InvocableJob = requires
+  {
+    // todo: make it not accept futures and create another future job
+    std::is_invocable_v<T> && std::is_same_v<void, std::invoke_result_t<T>>;
+  };
+
   /**
-   * @tparam FunctionType type to be run by the runner. Mostly void function
+   * @tparam T type to be run by the runner. Mostly void function
    * @brief Job descriptor to be run by the workers
    */
-  template <typename FunctionType = default_function_type>
-  requires std::invocable<FunctionType> && std::is_same_v<void, std::invoke_result_t<FunctionType>>
+  template <typename T = default_function_type>
+  requires std::invocable<T> && std::is_same_v<void, std::invoke_result_t<T>>
   struct Job {
   };
 }  // namespace concurrency
