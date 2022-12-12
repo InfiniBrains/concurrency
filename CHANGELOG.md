@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/InfiniBrains/concurrency/compare/v1.0.0...v1.1.0) (2022-12-12)
+
+
+### Features
+
+* **job:** add job specification ([da2f176](https://github.com/InfiniBrains/concurrency/commit/da2f176fab50d24cc99f3f1d5d65fd7f0ce82687))
+
 # 1.0.0 (2022-12-08)
 
 
