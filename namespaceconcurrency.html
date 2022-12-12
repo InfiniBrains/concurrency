@@ -62,6 +62,7 @@
                 <li><a href="#nested-classes">Classes</a></li>
                 <li><a href="#enum-members">Enums</a></li>
                 <li><a href="#typedef-members">Typedefs</a></li>
+                <li><a href="#var-members">Variables</a></li>
               </ul>
             </li>
           </ul>
@@ -74,7 +75,7 @@
             </dt>
             <dd>A class for saying hello in multiple languages.</dd>
             <dt>
-              <div class="m-doc-template">template&lt;typename FunctionType = <a href="namespaceconcurrency.html#a39a8c0851e4b8d89ee19f9330a3ba3b4" class="m-doc">default_<wbr />function_<wbr />type</a>&gt;</div>
+              <div class="m-doc-template">template&lt;typename T = <a href="namespaceconcurrency.html#a39a8c0851e4b8d89ee19f9330a3ba3b4" class="m-doc">default_<wbr />function_<wbr />type</a>&gt;</div>
               struct <a href="structconcurrency_1_1Job.html" class="m-doc">Job</a>
             </dt>
             <dd><a href="structconcurrency_1_1Job.html" class="m-doc">Job</a> descriptor to be run by the workers.</dd>
@@ -113,6 +114,16 @@
             <dd><span></span></dd>
           </dl>
         </section>
+        <section id="var-members">
+          <h2><a href="#var-members">Variables</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename T = default_function_type&gt;</div>
+              concept <a href="#a99455f3d07931f614476eea433b4dbd6" class="m-doc">InvocableJob</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
         <section>
           <h2>Enum documentation</h2>
           <section class="m-doc-details" id="af920cc7ed5180e08c6c658891a13693d"><div>
@@ -129,6 +140,19 @@
             <h3>
               using concurrency::<wbr /><a href="#a39a8c0851e4b8d89ee19f9330a3ba3b4" class="m-doc-self">default_function_type</a> = std::function&lt;void()&gt;
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Job_8h.html">&lt;concurrency/Job.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+        </section>
+        <section>
+          <h2>Variable documentation</h2>
+          <section class="m-doc-details" id="a99455f3d07931f614476eea433b4dbd6"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="Job_8h.html">&lt;concurrency/Job.h&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;typename T = default_function_type&gt;
+              </div>
+              concept concurrency::<wbr /><a href="#a99455f3d07931f614476eea433b4dbd6" class="m-doc-self">InvocableJob</a>
             </h3>
             <p><span></span></p>
           </div></section>
