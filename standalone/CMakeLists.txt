@@ -27,9 +27,11 @@ add_executable(ConcurrencyStandalone ${sourcesstandalone})
 if(EMSCRIPTEN)
   set(CMAKE_EXECUTABLE_SUFFIX ".html") # todo: we should not need this!
   message(STATUS "EMSCRIPTEN BUILD")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Oz -s WASM=0 -pthread")
 endif()
+
 message(STATUS "CMAKE_EXECUTABLE_SUFFIX: ${CMAKE_EXECUTABLE_SUFFIX}")
 
-set_target_properties(ConcurrencyStandalone PROPERTIES CXX_STANDARD 17)
+set_target_properties(ConcurrencyStandalone PROPERTIES CXX_STANDARD 20)
 
 target_link_libraries(ConcurrencyStandalone Concurrency::Concurrency cxxopts)
