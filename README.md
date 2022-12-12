@@ -4,8 +4,7 @@
 
 # Modern Cross Platform Job Scheduler and Runner with Job Stealing for Game Engines
 
-Setting up a new C++ project usually requires a significant amount of preparation and boilerplate code, even more so for modern C++ projects with tests, executables and continuous integration.
-This template is the result of learnings from many previous projects and should help reduce the work required to setup up a modern C++ project.
+A job stealing implementation for high performance engines. This is a MoBaGEn module and part of a C++ game development course.
 
 CI: [![Release](https://github.com/InfiniBrains/concurrency/actions/workflows/release.yml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/release.yml) [![Standalone](https://github.com/InfiniBrains/concurrency/actions/workflows/standalone.yml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/standalone.yml) [![Documentation](https://github.com/InfiniBrains/concurrency/actions/workflows/documentation.yaml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/documentation.yaml) [![Test](https://github.com/InfiniBrains/concurrency/actions/workflows/test.yml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/test.yml) [![Style](https://github.com/InfiniBrains/concurrency/actions/workflows/style.yml/badge.svg)](https://github.com/InfiniBrains/concurrency/actions/workflows/style.yml) 
 

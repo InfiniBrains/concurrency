@@ -26,7 +26,7 @@ CPMAddPackage("gh:TheLartians/Format.cmake@1.7.3")
 file(GLOB sourcestest CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp)
 add_executable(ConcurrencyTests ${sourcestest})
 target_link_libraries(ConcurrencyTests doctest::doctest Concurrency::Concurrency)
-set_target_properties(ConcurrencyTests PROPERTIES CXX_STANDARD 17)
+set_target_properties(ConcurrencyTests PROPERTIES CXX_STANDARD 20)
 
 # enable compiler warnings
 if(NOT TEST_INSTALLED_VERSION)
