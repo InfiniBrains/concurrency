@@ -1398,14 +1398,17 @@ var ASM_CONSTS = {
       abort('native code called abort()');
     }
 
+  function getHeapMax() {
+      return HEAPU8.length;
+    }
+  function _emscripten_get_heap_max() {
+      return getHeapMax();
+    }
+
   function _emscripten_memcpy_big(dest, src, num) {
       HEAPU8.copyWithin(dest, src, src + num);
     }
 
-  function getHeapMax() {
-      return HEAPU8.length;
-    }
-  
   function abortOnCannotGrowMemory(requestedSize) {
       abort('Cannot enlarge memory arrays to size ' + requestedSize + ' bytes (OOM). Either (1) compile with -sINITIAL_MEMORY=X with X higher than the current value ' + HEAP8.length + ', (2) compile with -sALLOW_MEMORY_GROWTH which allows increasing the size at runtime, or (3) if you want malloc to return NULL (0) instead of this abort, compile with -sABORTING_MALLOC=0');
     }
@@ -4405,6 +4408,7 @@ function checkIncomingModuleAPI() {
 var asmLibraryArg = {
   "__cxa_throw": ___cxa_throw,
   "abort": _abort,
+  "emscripten_get_heap_max": _emscripten_get_heap_max,
   "emscripten_memcpy_big": _emscripten_memcpy_big,
   "emscripten_resize_heap": _emscripten_resize_heap,
   "environ_get": _environ_get,
