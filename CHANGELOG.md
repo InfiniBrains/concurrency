@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/InfiniBrains/concurrency/compare/v1.1.1...v1.2.0) (2022-12-12)
+
+
+### Bug Fixes
+
+* convertible_to -> same_as ([4354eba](https://github.com/InfiniBrains/concurrency/commit/4354eba484e6c36410d1793d052a5a07542a706d))
+
+
+### Features
+
+* job queue ([92d0001](https://github.com/InfiniBrains/concurrency/commit/92d00013a14471b1772a2d1e1a1bcb147fe70240))
+
 ## [1.1.1](https://github.com/InfiniBrains/concurrency/compare/v1.1.0...v1.1.1) (2022-12-12)
 
 
