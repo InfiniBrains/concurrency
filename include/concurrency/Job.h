@@ -1,6 +1,8 @@
 #ifndef CONCURRENCY_JOB_H
 #define CONCURRENCY_JOB_H
+#include <concepts>
 #include <functional>
+
 namespace concurrency {
 #if __cpp_lib_move_only_function
   using default_function_type = std::move_only_function<void()>;
