@@ -1,3 +1,4 @@
+#include <concurrency/Scheduler.h>
 #include <concurrency/concurrency.h>
 #include <concurrency/version.h>
 
@@ -48,6 +49,8 @@ auto main(int argc, char** argv) -> int {
 
   concurrency::Concurrency concurrency(name);
   std::cout << concurrency.greet(langIt->second) << std::endl;
+
+  std::cout << "Threads: " << concurrency::Scheduler::ConcurrencyLevel() << std::endl;
 
   return 0;
 }
