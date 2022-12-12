@@ -41,6 +41,8 @@ https://infinibrains.github.io/concurrency/
 - [ ] Stop a job, not only the thread
 - [ ] A job can return a calculation to the caller
 - [ ] Wait for a selected group of jobs to finish. Fill an array with responses
+- [ ] Uses https://github.com/Naios/function2
+- [ ] Automatically generate bindings for dynamic loading including webidl. 
 - [ ] ??? 
 
 ## References 
