@@ -87,9 +87,9 @@ if (typeof window === 'undefined') {
 // }
 
 
-// ugly hack for crossOriginIsolated not enabled and SharedArrayBuffer not available
-if (typeof (window) == 'object'
-    && (typeof (crossOriginIsolated) == 'undefined' || !crossOriginIsolated)) {
-  SharedArrayBuffer = ArrayBuffer;
-  console.log('using SharedArrayBuffer = ArrayBuffer;')
-}
+// // ugly hack for crossOriginIsolated not enabled and SharedArrayBuffer not available
+// if (typeof (window) == 'object'
+//     && (typeof (crossOriginIsolated) == 'undefined' || !crossOriginIsolated)) {
+//   SharedArrayBuffer = ArrayBuffer;
+//   console.log('using SharedArrayBuffer = ArrayBuffer;')
+// }
