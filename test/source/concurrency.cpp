@@ -1,4 +1,4 @@
-#include <concurrency/concurrency.h>
+#include <concurrency/Scheduler.h>
 #include <concurrency/version.h>
 #include <doctest/doctest.h>
 
@@ -7,15 +7,11 @@
 TEST_CASE("Concurrency") {
   using namespace concurrency;
 
-  Concurrency concurrency("Tests");
-
-  CHECK(concurrency.greet(LanguageCode::EN) == "Hello, Tests!");
-  CHECK(concurrency.greet(LanguageCode::DE) == "Hallo Tests!");
-  CHECK(concurrency.greet(LanguageCode::ES) == "¡Hola Tests!");
-  CHECK(concurrency.greet(LanguageCode::FR) == "Bonjour Tests!");
+  CHECK(Scheduler::Instance().RunningWorkersQuantity() == Scheduler::Instance().ConcurrencyLevel());
 }
 
 TEST_CASE("Concurrency version") {
+  // todo: get this from git. automate cmake version change
   static_assert(std::string_view(CONCURRENCY_VERSION) == std::string_view("1.0"));
   CHECK(std::string(CONCURRENCY_VERSION) == std::string("1.0"));
 }

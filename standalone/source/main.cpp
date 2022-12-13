@@ -1,5 +1,4 @@
 #include <concurrency/Scheduler.h>
-#include <concurrency/concurrency.h>
 #include <concurrency/version.h>
 
 //#include <cxxopts.hpp>
