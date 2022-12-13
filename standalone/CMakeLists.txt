@@ -29,7 +29,10 @@ if(EMSCRIPTEN)
   set(CMAKE_EXECUTABLE_SUFFIX ".html") # todo: we should not need this!
   message(STATUS "EMSCRIPTEN BUILD")
   set(CMAKE_CXX_FLAGS
-      "${CMAKE_CXX_FLAGS} -Oz -s WASM=2 -pthread -s USE_PTHREADS=1 --extern-pre-js ${CMAKE_CURRENT_SOURCE_DIR}/../cmake/pre.js"
+      "${CMAKE_CXX_FLAGS} --shell-file ${CMAKE_CURRENT_SOURCE_DIR}/../html/shell.html"
+  )
+  file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../html/thread.js
+       DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
   )
 endif()
 
