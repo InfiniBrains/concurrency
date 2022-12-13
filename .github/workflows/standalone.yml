@@ -60,4 +60,4 @@ jobs:
         run: cmake --build build -j4 --config Release
 
       - name: execute
-        run: node ./build/out/ConcurrencyStandalone.js
+        run: node node --experimental-wasm-threads --experimental-wasm-bulk-memory build/out/ConcurrencyStandalone.js ./build/out/ConcurrencyStandalone.js

@@ -55,7 +55,7 @@ add_library(${PROJECT_NAME} ${headers} ${sources})
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 20)
 
 if(EMSCRIPTEN)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Oz -s WASM=0 -pthread -s USE_PTHREADS=1")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Oz -s WASM=2 -pthread -s USE_PTHREADS=1")
 endif()
 
 # being a cross-platform target, we enforce standards conformance on MSVC
