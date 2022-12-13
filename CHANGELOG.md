@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/InfiniBrains/concurrency/compare/v1.2.0...v1.2.1) (2022-12-13)
+
+
+### Bug Fixes
+
+* standalone build to run with node ([de62f65](https://github.com/InfiniBrains/concurrency/commit/de62f657c366112318590fc9e22d4baf424ab9b8))
+
 # [1.2.0](https://github.com/InfiniBrains/concurrency/compare/v1.1.1...v1.2.0) (2022-12-12)
 
 
