@@ -48,7 +48,7 @@ if (typeof window === 'undefined') {
     headers.set('Cross-Origin-Embedder-Policy', 'require-corp');  // or: credentialless
     headers.set('Cross-Origin-Opener-Policy', 'same-origin');
     headers.set('Origin-Trial', 'origin-trial');
-    console.log("headers set");
+    console.log('headers set');
     console.log(headers);
 
     return new Response(r.body, {status: r.status, statusText: r.statusText, headers});
