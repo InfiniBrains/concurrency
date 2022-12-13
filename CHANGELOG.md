@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/InfiniBrains/concurrency/compare/v1.2.1...v1.3.0) (2022-12-13)
+
+
+### Features
+
+* ugly hack in pre-js file to enable multi thread on browser ([ceb6f1c](https://github.com/InfiniBrains/concurrency/commit/ceb6f1c19e6b1bd277df87a099b7eaa4ddfc59b8))
+
 ## [1.2.1](https://github.com/InfiniBrains/concurrency/compare/v1.2.0...v1.2.1) (2022-12-13)
 
 
