@@ -25,8 +25,7 @@ file(GLOB sourcesstandalone CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/source
 add_executable(ConcurrencyStandalone ${sourcesstandalone})
 
 if(EMSCRIPTEN)
-  # todo: add pre js to have this
-  # if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
+  # todo: add pre js to have this if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
   set(CMAKE_EXECUTABLE_SUFFIX ".html") # todo: we should not need this!
   message(STATUS "EMSCRIPTEN BUILD")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Oz -s WASM=2 -pthread -s USE_PTHREADS=1")

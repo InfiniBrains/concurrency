@@ -10,8 +10,7 @@
     "test": "placeholder",
     "release": "npx -y semantic-release",
     "prestyle": "cmake -S. -BbuildStyle -DENABLE_TEST_COVERAGE=ON -DENABLE_STANDALONE=OFF -DENABLE_DOCUMENTATION=OFF",
-    "style": "cmake --build buildStyle --target fix-format",
-    "poststyle": "npx -y rimraf buildStyle"
+    "style": "cmake --build buildStyle --target fix-format"
   },
   "repository": {
     "type": "git",
