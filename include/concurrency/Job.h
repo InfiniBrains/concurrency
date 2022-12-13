@@ -3,6 +3,10 @@
 #include <concepts>
 #include <functional>
 
+// todo: types of jobs: joinable, detached, repeatable, future result wrap, pausable or stoppable
+// https://github.com/ConorWilliams/Threadpool
+// priority
+
 namespace concurrency {
 #if __cpp_lib_move_only_function
   using default_function_type = std::move_only_function<void()>;
