@@ -60,19 +60,72 @@
             <li>
               Reference
               <ul>
+                <li><a href="#pub-static-attribs">Public static variables</a></li>
                 <li><a href="#pub-static-methods">Public static functions</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
               </ul>
             </li>
           </ul>
         </nav>
+        <section id="pub-static-attribs">
+          <h2><a href="#pub-static-attribs">Public static variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a2f8053c84bf43cc6c7060787711344bf">
+              static const auto <a href="#a2f8053c84bf43cc6c7060787711344bf" class="m-doc-self">MainThreadId</a>
+            </dt>
+            <dd>the MainThreadId. Useful to check who is running the job.</dd>
+          </dl>
+        </section>
         <section id="pub-static-methods">
           <h2><a href="#pub-static-methods">Public static functions</a></h2>
           <dl class="m-doc">
-            <dt id="ab77a330b6578014de63c7932b020a232">
-              <span class="m-doc-wrap-bumper">static auto <a href="#ab77a330b6578014de63c7932b020a232" class="m-doc-self">ConcurrencyLevel</a>(</span><span class="m-doc-wrap">) -&gt; uint32_t -&gt; auto</span>
+            <dt>
+              <span class="m-doc-wrap-bumper">static auto <a href="#a5c6a27e11251215b3a69aa4b29914db3" class="m-doc">Instance</a>(</span><span class="m-doc-wrap">) -&gt; <a href="classconcurrency_1_1Scheduler.html" class="m-doc">Scheduler</a>&amp;</span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">static auto <a href="#a790f5dde5e4f36cbd8c8eac24d3d39c0" class="m-doc">ConcurrencyLevel</a>(</span><span class="m-doc-wrap">) -&gt; auto</span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a3d2dea6bc374752a415d7897d1e6afe9">
+              <span class="m-doc-wrap-bumper">auto <a href="#a3d2dea6bc374752a415d7897d1e6afe9" class="m-doc-self">RunningWorkersQuantity</a>(</span><span class="m-doc-wrap">) -&gt; size_t</span>
             </dt>
             <dd><span></span></dd>
           </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a5c6a27e11251215b3a69aa4b29914db3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">static <a href="classconcurrency_1_1Scheduler.html" class="m-doc">Scheduler</a>&amp; concurrency::<wbr />Scheduler::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5c6a27e11251215b3a69aa4b29914db3" class="m-doc-self">Instance</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>Singleton instance of the scheduler</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a790f5dde5e4f36cbd8c8eac24d3d39c0"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">static auto concurrency::<wbr />Scheduler::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a790f5dde5e4f36cbd8c8eac24d3d39c0" class="m-doc-self">ConcurrencyLevel</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>the number of concurrent hardware threads available. usually is the number of cpucores*2</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
         </section>
       </div>
     </div>

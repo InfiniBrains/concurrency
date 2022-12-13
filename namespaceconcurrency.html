@@ -71,10 +71,6 @@
           <h2><a href="#nested-classes">Classes</a></h2>
           <dl class="m-doc">
             <dt>
-              class <a href="classconcurrency_1_1Concurrency.html" class="m-doc">Concurrency</a>
-            </dt>
-            <dd>A class for saying hello in multiple languages.</dd>
-            <dt>
               <div class="m-doc-template">template&lt;<a href="namespaceconcurrency.html#a99455f3d07931f614476eea433b4dbd6" class="m-doc">InvocableJob</a> T = <a href="namespaceconcurrency.html#a39a8c0851e4b8d89ee19f9330a3ba3b4" class="m-doc">default_<wbr />function_<wbr />type</a>&gt;</div>
               struct <a href="structconcurrency_1_1Job.html" class="m-doc">Job</a>
             </dt>
@@ -98,12 +94,13 @@
           <h2><a href="#enum-members">Enums</a></h2>
           <dl class="m-doc">
             <dt>
-              <span class="m-doc-wrap-bumper">enum class <a href="#af920cc7ed5180e08c6c658891a13693d" class="m-doc">LanguageCode</a> { </span><span class="m-doc-wrap"><a href="#af920cc7ed5180e08c6c658891a13693daaa85f1840e282d8a8304dbc2c0d7c9b2" class="m-doc">EN</a>,
-              <a href="#af920cc7ed5180e08c6c658891a13693da3a52f3c22ed6fcde5bf696a6c02c9e73" class="m-doc">DE</a>,
-              <a href="#af920cc7ed5180e08c6c658891a13693da04c19fa1e772ab66f0aad2efe61f25cd" class="m-doc">ES</a>,
-              <a href="#af920cc7ed5180e08c6c658891a13693da11aedd0e432747c2bcd97b82808d24a0" class="m-doc">FR</a> }</span>
+              <span class="m-doc-wrap-bumper">enum class <a href="#a961e502972329b404b02d7deafe1469a" class="m-doc">RunningState</a> { </span><span class="m-doc-wrap"><a href="#a961e502972329b404b02d7deafe1469aac23e2b09ebe6bf4cb5e2a9abe85c0be2" class="m-doc">Stopped</a>,
+              <a href="#a961e502972329b404b02d7deafe1469aa5bda814c4aedb126839228f1a3d92f09" class="m-doc">Running</a>,
+              <a href="#a961e502972329b404b02d7deafe1469aa6ef56901182eb43edc66c98d6ad95394" class="m-doc">PauseRequested</a>,
+              <a href="#a961e502972329b404b02d7deafe1469aae99180abf47a8b3a856e0bcb2656990a" class="m-doc">Paused</a>,
+              <a href="#a961e502972329b404b02d7deafe1469aa5706de961fb376d701be6e7762d8b09c" class="m-doc">Waiting</a> }</span>
             </dt>
-            <dd></dd>
+            <dd>The states of the worker.</dd>
           </dl>
         </section>
         <section id="typedef-members">
@@ -112,7 +109,7 @@
             <dt>
               using <a href="#a39a8c0851e4b8d89ee19f9330a3ba3b4" class="m-doc">default_function_type</a> = std::function&lt;void()&gt;
             </dt>
-            <dd><span></span></dd>
+            <dd>default function type &quot;function&lt;void()&gt;&quot; will be used if dont provided</dd>
           </dl>
         </section>
         <section id="var-members">
@@ -132,12 +129,47 @@
         </section>
         <section>
           <h2>Enum documentation</h2>
-          <section class="m-doc-details" id="af920cc7ed5180e08c6c658891a13693d"><div>
+          <section class="m-doc-details" id="a961e502972329b404b02d7deafe1469a"><div>
             <h3>
-              enum class concurrency::<wbr /><a href="#af920cc7ed5180e08c6c658891a13693d" class="m-doc-self">LanguageCode</a>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="concurrency_8h.html">&lt;concurrency/concurrency.h&gt;</a></div>
+              enum class concurrency::<wbr /><a href="#a961e502972329b404b02d7deafe1469a" class="m-doc-self">RunningState</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="RunningState_8h.html">&lt;concurrency/RunningState.h&gt;</a></div>
             </h3>
-<p>Language codes to be used with the <a href="classconcurrency_1_1Concurrency.html" class="m-doc">Concurrency</a> class</p>
+            <p>The states of the worker.</p>
+            <table class="m-table m-fullwidth m-flat m-doc">
+              <thead><tr><th style="width: 1%">Enumerators</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><a href="#a961e502972329b404b02d7deafe1469aac23e2b09ebe6bf4cb5e2a9abe85c0be2" class="m-doc-self" id="a961e502972329b404b02d7deafe1469aac23e2b09ebe6bf4cb5e2a9abe85c0be2">Stopped</a></td>
+                  <td>
+                  <p>it is doing nothing</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#a961e502972329b404b02d7deafe1469aa5bda814c4aedb126839228f1a3d92f09" class="m-doc-self" id="a961e502972329b404b02d7deafe1469aa5bda814c4aedb126839228f1a3d92f09">Running</a></td>
+                  <td>
+                  <p>it is running</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#a961e502972329b404b02d7deafe1469aa6ef56901182eb43edc66c98d6ad95394" class="m-doc-self" id="a961e502972329b404b02d7deafe1469aa6ef56901182eb43edc66c98d6ad95394">PauseRequested</a></td>
+                  <td>
+                  <p>pause is requested</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#a961e502972329b404b02d7deafe1469aae99180abf47a8b3a856e0bcb2656990a" class="m-doc-self" id="a961e502972329b404b02d7deafe1469aae99180abf47a8b3a856e0bcb2656990a">Paused</a></td>
+                  <td>
+<p>it is paused</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#a961e502972329b404b02d7deafe1469aa5706de961fb376d701be6e7762d8b09c" class="m-doc-self" id="a961e502972329b404b02d7deafe1469aa5706de961fb376d701be6e7762d8b09c">Waiting</a></td>
+                  <td>
+                  <p>it is waiting for time or resource. Mostly for non blocking jobs and swappable contexts. Coroutines(?).</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div></section>
         </section>
         <section>
@@ -147,7 +179,7 @@
               using concurrency::<wbr /><a href="#a39a8c0851e4b8d89ee19f9330a3ba3b4" class="m-doc-self">default_function_type</a> = std::function&lt;void()&gt;
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Job_8h.html">&lt;concurrency/Job.h&gt;</a></div>
             </h3>
-            <p><span></span></p>
+            <p>default function type &quot;function&lt;void()&gt;&quot; will be used if dont provided</p>
           </div></section>
         </section>
         <section>
