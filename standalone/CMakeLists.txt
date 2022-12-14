@@ -10,11 +10,8 @@ include(../cmake/tools.cmake)
 
 include(../cmake/CPM.cmake)
 
-CPMAddPackage(
-  GITHUB_REPOSITORY jarro2783/cxxopts
-  VERSION 3.0.0
-  OPTIONS "CXXOPTS_BUILD_EXAMPLES NO" "CXXOPTS_BUILD_TESTS NO" "CXXOPTS_ENABLE_INSTALL YES"
-)
+# CPMAddPackage( GITHUB_REPOSITORY jarro2783/cxxopts VERSION 3.0.0 OPTIONS "CXXOPTS_BUILD_EXAMPLES
+# NO" "CXXOPTS_BUILD_TESTS NO" "CXXOPTS_ENABLE_INSTALL YES" )
 
 # CPMAddPackage(NAME Concurrency SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/..)
 
@@ -40,4 +37,4 @@ message(STATUS "CMAKE_EXECUTABLE_SUFFIX: ${CMAKE_EXECUTABLE_SUFFIX}")
 
 set_target_properties(ConcurrencyStandalone PROPERTIES CXX_STANDARD 20)
 
-target_link_libraries(ConcurrencyStandalone Concurrency::Concurrency cxxopts)
+target_link_libraries(ConcurrencyStandalone Concurrency::Concurrency)

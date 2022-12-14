@@ -3,7 +3,15 @@
 #include <concepts>
 #include <functional>
 
+// todo: types of jobs: joinable, detached, repeatable, future result wrap, pausable or stoppable
+// https://github.com/ConorWilliams/Threadpool
+// priority
+
 namespace concurrency {
+
+  /**
+   * @brief default function type "function<void()>" will be used if dont provided
+   */
 #if __cpp_lib_move_only_function
   using default_function_type = std::move_only_function<void()>;
 #else
@@ -12,7 +20,7 @@ namespace concurrency {
 
   template <typename T = default_function_type>
   concept InvocableJob = requires {
-    // todo: make it not accept futures and create another future job
+    // todo: restrict this to not accept futures neither create another future job
     std::is_invocable_v<T>&& std::is_same_v<void, std::invoke_result_t<T>>;
   };
 

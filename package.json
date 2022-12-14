@@ -10,7 +10,9 @@
     "test": "placeholder",
     "release": "npx -y semantic-release",
     "prestyle": "cmake -S. -BbuildStyle -DENABLE_TEST_COVERAGE=ON -DENABLE_STANDALONE=OFF -DENABLE_DOCUMENTATION=OFF",
-    "style": "cmake --build buildStyle --target fix-format"
+    "style": "cmake --build buildStyle --target fix-format",
+    "prebuildall": "cmake -S. -Bbuild -DENABLE_TEST_COVERAGE=OFF -DENABLE_STANDALONE=ON -DENABLE_DOCUMENTATION=OFF",
+    "buildall": "cmake --build build -j20"
   },
   "repository": {
     "type": "git",

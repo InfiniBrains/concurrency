@@ -38,6 +38,9 @@ CPMAddPackage(
   OPTIONS "FMT_INSTALL YES" # create an installable target
 )
 
+# FetchContent_Declare( Function2 GIT_REPOSITORY "https://github.com/Naios/function2" GIT_TAG
+# "4.2.0" ) FetchContent_MakeAvailable(Function2)
+
 # ---- Add source files ----
 
 # Note: globbing sources is considered bad practice as CMake's generators may not detect new files

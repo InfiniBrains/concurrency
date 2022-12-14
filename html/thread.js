@@ -45,8 +45,11 @@ if (typeof window === 'undefined') {
     }
 
     const headers = new Headers(r.headers);
-    headers.set('Cross-Origin-Embedder-Policy', 'credentialless');  // or: require-corp
+    headers.set('Cross-Origin-Embedder-Policy', 'require-corp');  // or: credentialless
     headers.set('Cross-Origin-Opener-Policy', 'same-origin');
+    headers.set('Origin-Trial', 'origin-trial');
+    console.log('headers set');
+    console.log(headers);
 
     return new Response(r.body, {status: r.status, statusText: r.statusText, headers});
   }
@@ -87,9 +90,9 @@ if (typeof window === 'undefined') {
 // }
 
 
-// ugly hack for crossOriginIsolated not enabled and SharedArrayBuffer not available
-if (typeof (window) == 'object'
-    && (typeof (crossOriginIsolated) == 'undefined' || !crossOriginIsolated)) {
-  SharedArrayBuffer = ArrayBuffer;
-  console.log('using SharedArrayBuffer = ArrayBuffer;')
-}
+// // ugly hack for crossOriginIsolated not enabled and SharedArrayBuffer not available
+// if (typeof (window) == 'object'
+//     && (typeof (crossOriginIsolated) == 'undefined' || !crossOriginIsolated)) {
+//   SharedArrayBuffer = ArrayBuffer;
+//   console.log('using SharedArrayBuffer = ArrayBuffer;')
+// }
